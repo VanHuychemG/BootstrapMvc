@@ -5,4 +5,4 @@ obj/
 *.suo
 *.user
 
-wwwroot/lib/
+BootstrapMvc.UI/wwwroot/lib/
