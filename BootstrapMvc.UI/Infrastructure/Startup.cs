@@ -1,7 +1,7 @@
 ﻿using System;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -23,7 +23,12 @@ namespace BootstrapMvc.UI.Infrastructure
 
             // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
             if (env.IsDevelopment())
+            {
                 builder.AddUserSecrets();
+
+                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
 
             Configuration = builder.Build();
         }
@@ -32,6 +37,10 @@ namespace BootstrapMvc.UI.Infrastructure
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add framework services.
+            services.AddApplicationInsightsTelemetry(Configuration);
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,14 +48,22 @@ namespace BootstrapMvc.UI.Infrastructure
         {
             loggerFactory.AddConsole();
 
+            app.UseApplicationInsightsRequestTelemetry();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
+            app.UseApplicationInsightsExceptionTelemetry();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
