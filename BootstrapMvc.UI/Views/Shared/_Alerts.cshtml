@@ -1,0 +1,31 @@
+﻿@using System.Threading.Tasks
+@using BootstrapMvc.Core.Helpers
+@using BootstrapMvc.Core.Extensions
+@{
+    var alerts = TempData.ContainsKey(Alert.TempDataKey)
+        ? TempData.GetFromJson<List<Alert>>(Alert.TempDataKey)
+        : new List<Alert>();
+
+    if (alerts.Any())
+    {
+        foreach (var alert in alerts)
+        {
+            var dismissableClass = alert.Dismissable ? "alert-dismissable" : null;
+            <div class="alert alert-@alert.AlertStyle @dismissableClass fade in">
+                @if (alert.Dismissable)
+                {
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                }
+                <p>@Html.Raw(alert.Message)</p>
+
+                @if (alert.ModelStateErrors.Count > 0)
+                {
+                    foreach (var e in alert.ModelStateErrors)
+                    {
+                        <p>@e</p>
+                    }
+                }
+            </div>
+        }
+    }
+}
