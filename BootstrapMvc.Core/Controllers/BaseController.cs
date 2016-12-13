@@ -33,7 +33,7 @@ namespace BootstrapMvc.Core.Controllers
         private void AddAlert(string alertStyle, string message, bool dismissable, IEnumerable<string> errorMessages = null)
         {
             var alerts = TempData.ContainsKey(Alert.TempDataKey)
-                ? (List<Alert>)TempData[Alert.TempDataKey]
+                ? TempData.GetFromJson<List<Alert>>(Alert.TempDataKey)
                 : new List<Alert>();
 
             alerts.Add(new Alert
