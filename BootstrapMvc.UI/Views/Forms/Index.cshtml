@@ -1,0 +1,14 @@
+﻿<form asp-action="Index" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
+    @await Component.InvokeAsync("Address", new { address = Model })
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            setFormValidation("myForm");
+        })
+    </script>
+}

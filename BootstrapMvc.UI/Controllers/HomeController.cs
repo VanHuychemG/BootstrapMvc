@@ -1,10 +1,8 @@
-﻿using BootstrapMvc.Core.Controllers;
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace BootstrapMvc.UI.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
@@ -21,25 +19,6 @@ namespace BootstrapMvc.UI.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Alerts()
-        {
-            ViewData["Message"] = "Samples of alert messages.";
-
-            Information("Fading information message.");
-            Information("Dismissable information message.", true);
-
-            Warning("Fading warning message.");
-            Warning("Dismissable warning message.", null, true);
-
-            Danger("Fading danger message.");
-            Danger("Dismissable danger message", null, true);
-
-            Success("Fading success message.");
-            Success("Dismissable success message.", true);
 
             return View();
         }

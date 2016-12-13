@@ -797,7 +797,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -830,9 +830,29 @@
       "Microsoft.DiaSymReader.Native/1.4.0": {
         "type": "package",
         "runtimeTargets": {
-          "runtimes/win/native/_._": {
+          "runtimes/win-x64/native/Microsoft.DiaSymReader.Native.amd64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/Microsoft.DiaSymReader.Native.x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win/native/Microsoft.DiaSymReader.Native.amd64.dll": {
             "assetType": "native",
             "rid": "win"
+          },
+          "runtimes/win/native/Microsoft.DiaSymReader.Native.arm.dll": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win/native/Microsoft.DiaSymReader.Native.x86.dll": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win8-arm/native/Microsoft.DiaSymReader.Native.arm.dll": {
+            "assetType": "native",
+            "rid": "win8-arm"
           }
         }
       },
@@ -1350,7 +1370,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -1958,9 +1978,17 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/osx/lib/netstandard1.4/_._": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -2241,7 +2269,11 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2264,7 +2296,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -2329,7 +2361,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.3.0": {
@@ -2348,7 +2380,7 @@
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -2420,7 +2452,11 @@
           "ref/netstandard1.3/System.Net.NameResolution.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2465,7 +2501,11 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.Requests.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Requests.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2507,7 +2547,11 @@
           "ref/netstandard1.3/System.Net.Security.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Security.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2539,7 +2583,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Net.WebSockets/4.3.0": {
@@ -2622,7 +2666,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.3.0": {
@@ -3344,7 +3388,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.3.0": {
@@ -3528,18 +3572,18 @@
       },
       "BootstrapMvc.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "Microsoft.NETCore.App": "1.1.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         }
       }
     },
@@ -4307,7 +4351,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -4863,7 +4907,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -5141,7 +5185,7 @@
       "runtime.debian.8-x64.Microsoft.NETCore.DotNetHost/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/dotnet": {}
         }
       },
       "runtime.debian.8-x64.Microsoft.NETCore.DotNetHostPolicy/1.1.0": {
@@ -5150,7 +5194,7 @@
           "Microsoft.NETCore.DotNetHostResolver": "1.1.0"
         },
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/libhostpolicy.so": {}
         }
       },
       "runtime.debian.8-x64.Microsoft.NETCore.DotNetHostResolver/1.1.0": {
@@ -5159,13 +5203,13 @@
           "Microsoft.NETCore.DotNetHost": "1.1.0"
         },
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/libhostfxr.so": {}
         }
       },
       "runtime.debian.8-x64.Microsoft.NETCore.Jit/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/libclrjit.so": {}
         }
       },
       "runtime.debian.8-x64.Microsoft.NETCore.Runtime.CoreCLR/1.1.0": {
@@ -5174,10 +5218,22 @@
           "ref/netstandard1.0/_._": {}
         },
         "runtime": {
-          "runtimes/debian.8-x64/lib/netstandard1.0/_._": {}
+          "runtimes/debian.8-x64/lib/netstandard1.0/SOS.NETCore.dll": {},
+          "runtimes/debian.8-x64/lib/netstandard1.0/System.Private.CoreLib.dll": {},
+          "runtimes/debian.8-x64/lib/netstandard1.0/mscorlib.dll": {}
         },
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/System.Globalization.Native.so": {},
+          "runtimes/debian.8-x64/native/System.Private.CoreLib.ni.dll": {},
+          "runtimes/debian.8-x64/native/libcoreclr.so": {},
+          "runtimes/debian.8-x64/native/libcoreclrtraceptprovider.so": {},
+          "runtimes/debian.8-x64/native/libdbgshim.so": {},
+          "runtimes/debian.8-x64/native/libmscordaccore.so": {},
+          "runtimes/debian.8-x64/native/libmscordbi.so": {},
+          "runtimes/debian.8-x64/native/libsos.so": {},
+          "runtimes/debian.8-x64/native/libsosplugin.so": {},
+          "runtimes/debian.8-x64/native/mscorlib.ni.dll": {},
+          "runtimes/debian.8-x64/native/sosdocsunix.txt": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System/4.3.0": {
@@ -5202,7 +5258,7 @@
       "runtime.debian.8-x64.runtime.native.System.Net.Security/4.3.0": {
         "type": "package",
         "native": {
-          "runtimes/debian.8-x64/native/_._": {}
+          "runtimes/debian.8-x64/native/System.Net.Security.Native.so": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5780,7 +5836,7 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtime": {
-          "runtimes/linux/lib/netstandard1.4/_._": {}
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {}
         }
       },
       "System.Diagnostics.StackTrace/4.3.0": {
@@ -6038,7 +6094,7 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/_._": {}
+          "runtimes/unix/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         }
       },
       "System.IO.UnmanagedMemoryStream/4.3.0": {
@@ -6058,7 +6114,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -6123,7 +6179,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.3.0": {
@@ -6142,7 +6198,7 @@
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -6244,7 +6300,7 @@
           "ref/netstandard1.3/System.Net.Requests.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/_._": {}
+          "runtimes/unix/lib/netstandard1.3/System.Net.Requests.dll": {}
         }
       },
       "System.Net.Security/4.3.0": {
@@ -6283,7 +6339,7 @@
           "ref/netstandard1.3/System.Net.Security.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.6/_._": {}
+          "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll": {}
         }
       },
       "System.Net.Sockets/4.3.0": {
@@ -6313,7 +6369,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Net.WebSockets/4.3.0": {
@@ -6408,7 +6464,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.3.0": {
@@ -7064,7 +7120,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.3.0": {
@@ -7249,18 +7305,18 @@
       },
       "BootstrapMvc.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "Microsoft.NETCore.App": "1.1.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         }
       }
     },
@@ -8028,7 +8084,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -8061,7 +8117,7 @@
       "Microsoft.DiaSymReader.Native/1.4.0": {
         "type": "package",
         "native": {
-          "runtimes/win-x64/native/_._": {}
+          "runtimes/win-x64/native/Microsoft.DiaSymReader.Native.amd64.dll": {}
         }
       },
       "Microsoft.DotNet.PlatformAbstractions/1.1.0": {
@@ -8587,7 +8643,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -9114,7 +9170,7 @@
       "runtime.win7-x64.Microsoft.NETCore.DotNetHost/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/win7-x64/native/_._": {}
+          "runtimes/win7-x64/native/dotnet.exe": {}
         }
       },
       "runtime.win7-x64.Microsoft.NETCore.DotNetHostPolicy/1.1.0": {
@@ -9123,7 +9179,7 @@
           "Microsoft.NETCore.DotNetHostResolver": "1.1.0"
         },
         "native": {
-          "runtimes/win7-x64/native/_._": {}
+          "runtimes/win7-x64/native/hostpolicy.dll": {}
         }
       },
       "runtime.win7-x64.Microsoft.NETCore.DotNetHostResolver/1.1.0": {
@@ -9132,13 +9188,13 @@
           "Microsoft.NETCore.DotNetHost": "1.1.0"
         },
         "native": {
-          "runtimes/win7-x64/native/_._": {}
+          "runtimes/win7-x64/native/hostfxr.dll": {}
         }
       },
       "runtime.win7-x64.Microsoft.NETCore.Jit/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/win7-x64/native/_._": {}
+          "runtimes/win7-x64/native/clrjit.dll": {}
         }
       },
       "runtime.win7-x64.Microsoft.NETCore.Runtime.CoreCLR/1.1.0": {
@@ -9147,10 +9203,21 @@
           "ref/netstandard1.0/_._": {}
         },
         "runtime": {
-          "runtimes/win7-x64/lib/netstandard1.0/_._": {}
+          "runtimes/win7-x64/lib/netstandard1.0/SOS.NETCore.dll": {},
+          "runtimes/win7-x64/lib/netstandard1.0/System.Private.CoreLib.dll": {},
+          "runtimes/win7-x64/lib/netstandard1.0/mscorlib.dll": {}
         },
         "native": {
-          "runtimes/win7-x64/native/_._": {}
+          "runtimes/win7-x64/native/System.Private.CoreLib.ni.dll": {},
+          "runtimes/win7-x64/native/clretwrc.dll": {},
+          "runtimes/win7-x64/native/coreclr.dll": {},
+          "runtimes/win7-x64/native/dbgshim.dll": {},
+          "runtimes/win7-x64/native/mscordaccore.dll": {},
+          "runtimes/win7-x64/native/mscordbi.dll": {},
+          "runtimes/win7-x64/native/mscorlib.ni.dll": {},
+          "runtimes/win7-x64/native/mscorrc.debug.dll": {},
+          "runtimes/win7-x64/native/mscorrc.dll": {},
+          "runtimes/win7-x64/native/sos.dll": {}
         }
       },
       "runtime.win7-x64.runtime.native.System.IO.Compression/4.3.0": {
@@ -9466,7 +9533,7 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.4/_._": {}
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {}
         }
       },
       "System.Diagnostics.StackTrace/4.3.0": {
@@ -9724,7 +9791,7 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         }
       },
       "System.IO.UnmanagedMemoryStream/4.3.0": {
@@ -9744,7 +9811,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -9809,7 +9876,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.3.0": {
@@ -9828,7 +9895,7 @@
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -9930,7 +9997,7 @@
           "ref/netstandard1.3/System.Net.Requests.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Requests.dll": {}
         }
       },
       "System.Net.Security/4.3.0": {
@@ -9969,7 +10036,7 @@
           "ref/netstandard1.3/System.Net.Security.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Security.dll": {}
         }
       },
       "System.Net.Sockets/4.3.0": {
@@ -9999,7 +10066,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Net.WebSockets/4.3.0": {
@@ -10094,7 +10161,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.3.0": {
@@ -10750,7 +10817,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.3.0": {
@@ -10935,18 +11002,18 @@
       },
       "BootstrapMvc.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "Microsoft.NETCore.App": "1.1.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         }
       }
     },
@@ -11714,7 +11781,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -11747,7 +11814,7 @@
       "Microsoft.DiaSymReader.Native/1.4.0": {
         "type": "package",
         "native": {
-          "runtimes/win-x86/native/_._": {}
+          "runtimes/win-x86/native/Microsoft.DiaSymReader.Native.x86.dll": {}
         }
       },
       "Microsoft.DotNet.PlatformAbstractions/1.1.0": {
@@ -12273,7 +12340,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -12800,7 +12867,7 @@
       "runtime.win7-x86.Microsoft.NETCore.DotNetHost/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/win7-x86/native/_._": {}
+          "runtimes/win7-x86/native/dotnet.exe": {}
         }
       },
       "runtime.win7-x86.Microsoft.NETCore.DotNetHostPolicy/1.1.0": {
@@ -12809,7 +12876,7 @@
           "Microsoft.NETCore.DotNetHostResolver": "1.1.0"
         },
         "native": {
-          "runtimes/win7-x86/native/_._": {}
+          "runtimes/win7-x86/native/hostpolicy.dll": {}
         }
       },
       "runtime.win7-x86.Microsoft.NETCore.DotNetHostResolver/1.1.0": {
@@ -12818,13 +12885,13 @@
           "Microsoft.NETCore.DotNetHost": "1.1.0"
         },
         "native": {
-          "runtimes/win7-x86/native/_._": {}
+          "runtimes/win7-x86/native/hostfxr.dll": {}
         }
       },
       "runtime.win7-x86.Microsoft.NETCore.Jit/1.1.0": {
         "type": "package",
         "native": {
-          "runtimes/win7-x86/native/_._": {}
+          "runtimes/win7-x86/native/clrjit.dll": {}
         }
       },
       "runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR/1.1.0": {
@@ -12833,10 +12900,21 @@
           "ref/netstandard1.0/_._": {}
         },
         "runtime": {
-          "runtimes/win7-x86/lib/netstandard1.0/_._": {}
+          "runtimes/win7-x86/lib/netstandard1.0/SOS.NETCore.dll": {},
+          "runtimes/win7-x86/lib/netstandard1.0/System.Private.CoreLib.dll": {},
+          "runtimes/win7-x86/lib/netstandard1.0/mscorlib.dll": {}
         },
         "native": {
-          "runtimes/win7-x86/native/_._": {}
+          "runtimes/win7-x86/native/System.Private.CoreLib.ni.dll": {},
+          "runtimes/win7-x86/native/clretwrc.dll": {},
+          "runtimes/win7-x86/native/coreclr.dll": {},
+          "runtimes/win7-x86/native/dbgshim.dll": {},
+          "runtimes/win7-x86/native/mscordaccore.dll": {},
+          "runtimes/win7-x86/native/mscordbi.dll": {},
+          "runtimes/win7-x86/native/mscorlib.ni.dll": {},
+          "runtimes/win7-x86/native/mscorrc.debug.dll": {},
+          "runtimes/win7-x86/native/mscorrc.dll": {},
+          "runtimes/win7-x86/native/sos.dll": {}
         }
       },
       "runtime.win7-x86.runtime.native.System.IO.Compression/4.3.0": {
@@ -13152,7 +13230,7 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.4/_._": {}
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {}
         }
       },
       "System.Diagnostics.StackTrace/4.3.0": {
@@ -13410,7 +13488,7 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         }
       },
       "System.IO.UnmanagedMemoryStream/4.3.0": {
@@ -13430,7 +13508,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -13495,7 +13573,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.3.0": {
@@ -13514,7 +13592,7 @@
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -13616,7 +13694,7 @@
           "ref/netstandard1.3/System.Net.Requests.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Requests.dll": {}
         }
       },
       "System.Net.Security/4.3.0": {
@@ -13655,7 +13733,7 @@
           "ref/netstandard1.3/System.Net.Security.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard1.3/_._": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Security.dll": {}
         }
       },
       "System.Net.Sockets/4.3.0": {
@@ -13685,7 +13763,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Net.WebSockets/4.3.0": {
@@ -13780,7 +13858,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.3.0": {
@@ -14436,7 +14514,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.3.0": {
@@ -14621,18 +14699,18 @@
       },
       "BootstrapMvc.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "Microsoft.NETCore.App": "1.1.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BootstrapMvc.Core.dll": {}
+          "netcoreapp1.1/BootstrapMvc.Core.dll": {}
         }
       }
     }
@@ -15188,7 +15266,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "ipj2A75alrGKqiJT2ZJp1OvORXLrKiFjXvV7GjGnHzOhaCu4Ge54+gyzZXZTxzOzgyxmCM/LMmDsZ1psEiX5LA==",
       "type": "package",
       "path": "Microsoft.CodeAnalysis.Analyzers/1.1.0",
       "files": [
@@ -15204,7 +15282,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Common/1.3.0": {
-      "sha512": "V09G35cs0CT1C4Dr1IEOh8IGfnWALEVAOO5JXsqagxXwmYR012TlorQ+vx2eXxfZRKs3gAS/r92gN9kRBLba5A==",
+      "sha512": "PD02FndQNy164D1hGFqVFOY0JBWC7gLYlENdwZChx7zx9Qbhqz1wFeA+ParriohU+xr5nToiqkTSK55gbM3VUA==",
       "type": "package",
       "path": "Microsoft.CodeAnalysis.Common/1.3.0",
       "files": [
@@ -15220,7 +15298,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.CSharp/1.3.0": {
-      "sha512": "BgWDIAbSFsHuGeLSn/rljLi51nXqkSo4DZ0qEIrHyPVasrhxEVq7aV8KKZ3HEfSFB+GIhBmOogE+mlOLYg19eg==",
+      "sha512": "LOAlpXFxgzsCf6opxpE3RwnDDgZItRH5ydHc7JzsidU/dNaahg9AsN4nl10EenJvJ06lsyfuMtfrehCMWhXc6Q==",
       "type": "package",
       "path": "Microsoft.CodeAnalysis.CSharp/1.3.0",
       "files": [
@@ -15236,7 +15314,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.VisualBasic/1.3.0": {
-      "sha512": "Sf3k8PkTkWqBmXnnblJbvb7ewO6mJzX6WO2t7m04BmOY5qBq6yhhyXnn/BMM+QCec3Arw3X35Zd8f9eBql0qgg==",
+      "sha512": "TjwXtyYo6mKuHuLZr+FnTpNvQQMxFyXd91Eb4ljXW0Eu4DZasRZsv6ShpbQawtbRQdCnL913BA3uBiRayLyZag==",
       "type": "package",
       "path": "Microsoft.CodeAnalysis.VisualBasic/1.3.0",
       "files": [
@@ -15755,7 +15833,7 @@
       ]
     },
     "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
-      "sha512": "SaToCvvsGMxTgtLv/BrFQ5IFMPRE1zpWbnqbpwykJa8W5XiX82CXI6K2o7yf5xS7EP6t/JzFLV0SIDuWpvBZVw==",
+      "sha512": "sunsuza6XOtVc9reow07xx/UXoNCjBB0c0qfoFypl0cLDGi82HshmEU0y0fEHbjT2PLvSl67UkUD3WR4I4J/LQ==",
       "type": "package",
       "path": "Microsoft.NETCore.Windows.ApiSets/1.0.1",
       "files": [
@@ -16540,7 +16618,7 @@
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
+      "sha512": "q+4Mm/NloSnfpkInf5ysCNprBfoVmnnhtNjXdDNk065477Ot66kiQF4+R+m5xROxF42kTJuY3zEt8A9Xw7QiGQ==",
       "type": "package",
       "path": "runtime.native.System.Security.Cryptography.Apple/4.3.0",
       "files": [
@@ -16588,7 +16666,7 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+      "sha512": "wG3saguHRX49MiClpXbAgnEGmN7TZBvLkd0aqWoQ5qc57eWiY8fJR5TLDw/mMvPlz9ldwWTw94MBOnBJ7gf3yw==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0",
       "files": [
@@ -17763,7 +17841,7 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.0.0": {
-      "sha512": "qjF74OTAU+mRhLaL4YSfiWy3vj6T3AOz8AW37l5zCwfbBfj0k7E94XnEsRaf2TnhE/7QaV6Hvqakoy2LoV8MVg==",
+      "sha512": "7PRg861WV8iYaudhcVaZCrUmDBYg16hukcwTGqJYtuZKkAEZsukkodJBu72JmAV5gYAhB7WZFODr5h9JrpcBQQ==",
       "type": "package",
       "path": "System.Diagnostics.FileVersionInfo/4.0.0",
       "files": [
@@ -20444,7 +20522,7 @@
       ]
     },
     "System.Security.Cryptography.Algorithms/4.3.0": {
-      "sha512": "W1kd2Y8mYSCgc3ULTAZ0hOP2dSdG5YauTb1089T0/kRcN2MpSAW1izOFROrJgxSlMn3ArsgHXagigyi+ibhevg==",
+      "sha512": "c9S6HXPoY7RUEqetope3nRu6pL3hJTF9ym377Up2R7BZOiRpAKBy++i1UiF3CIGAV3c4ZELVN0ZVci9fnZeEIg==",
       "type": "package",
       "path": "System.Security.Cryptography.Algorithms/4.3.0",
       "files": [
@@ -20823,7 +20901,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.0.1": {
-      "sha512": "h4z6rrA/hxWf4655D18IIZ0eaLRa3tQC/j+e26W+VinIHY0l07iEXaAvO0YSYq3MvCjMYy8Zs5AdC1sxNQOB7Q==",
+      "sha512": "zEDaIscFFHzynEelS9a3x5pkubu18SJGx1dY79/Qp8lAXJEUS3hcH6UHo+jPWj9cseQZY2jYyy/X1VrG17P2Uw==",
       "type": "package",
       "path": "System.Text.Encoding.CodePages/4.0.1",
       "files": [
@@ -21538,7 +21616,7 @@
       ]
     },
     "System.Xml.XmlDocument/4.0.1": {
-      "sha512": "2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ==",
+      "sha512": "Bp4s7r+x4eP1OdulEpOEUB+M9PE7TkI2GEHme+gUvCz4mCJAPIKEsRZF6VEssD0dOIXEkK0UP3ARxbdGUqXujQ==",
       "type": "package",
       "path": "System.Xml.XmlDocument/4.0.1",
       "files": [
@@ -21575,7 +21653,7 @@
       ]
     },
     "System.Xml.XPath/4.0.1": {
-      "sha512": "UWd1H+1IJ9Wlq5nognZ/XJdyj8qPE4XufBUkAW59ijsCPjZkZe0MUzKKJFBr+ZWBe5Wq1u1d5f2CYgE93uH7DA==",
+      "sha512": "3KsuElgtxsrn8bdamaB5AfDLlfa3ARdbbSgw5aAt6uSq7fJte/rN2i3K8IliEl3UKJF7sjpAnlmm0bQjWRxERg==",
       "type": "package",
       "path": "System.Xml.XPath/4.0.1",
       "files": [
@@ -21612,7 +21690,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.0.1": {
-      "sha512": "FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q==",
+      "sha512": "X4E9/wdncuhS26Uw2gamqxib+MLnfvWZrG/dXYnx349dsZi2jjCgGWVTJQaLEoqCqE1Q+ssprcnF3CV8ba/j7A==",
       "type": "package",
       "path": "System.Xml.XPath.XDocument/4.0.1",
       "files": [
