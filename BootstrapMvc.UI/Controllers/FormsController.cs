@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BootstrapMvc.Core.Controllers;
+using BootstrapMvc.UI.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BootstrapMvc.UI.Controllers
 {
-    public class FormsController: Controller
+    public class FormsController: BaseController
     {
         public IActionResult Index()
         {
@@ -11,9 +13,18 @@ namespace BootstrapMvc.UI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken, ActionName("Index")]
-        public IActionResult Edit()
+        public IActionResult Edit(AddressViewModel viewModel)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                Success("Hooray!");
+
+                return View(viewModel);
+            }
+
+            Danger("Looks like something went wrong. Please check your form.");
+
+            return View(viewModel);
         }
     }
 }
