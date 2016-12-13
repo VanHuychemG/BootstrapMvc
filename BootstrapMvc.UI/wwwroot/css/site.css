@@ -2,6 +2,11 @@
     padding-top: 90px; /*Necessary for sticky header*/
 }
 
+.navbar {
+    -ms-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
 /*
     Footer
 */
@@ -54,5 +59,61 @@
     .jumbotron {
         padding-top: 24px;
         padding-bottom: 24px;
+    }
+}
+
+/*
+    Fade out alerts
+*/
+
+.alert {
+    -webkit-animation: fadeOut 3s ease 1; /* Safari 4+ */
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+    -moz-animation: fadeOut 3s ease 1; /* Fx 5+ */
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-delay: 2s;
+    animation: fadeOut 3s ease 1; /* IE 10+, Fx 29+ */
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

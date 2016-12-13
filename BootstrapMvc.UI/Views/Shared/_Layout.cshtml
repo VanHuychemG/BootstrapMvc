@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BootstrapMvc</title>
+
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" href="~/lib/bootswatch/simplex/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
+
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
@@ -22,6 +24,7 @@
         <link rel="stylesheet" href="~/lib/bootswatch/simplex/bootstrap.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
     <base href="/">
 </head>
 <body>
@@ -30,10 +33,13 @@
         @await Html.PartialAsync("_Alerts")
         @RenderBody()
     </div>
+
     <div>
-        <a id="back-to-top" href="#" class="btn btn-primary btn-md back-to-top" role="button" title="Klik hier om naar het begin van de pagina te gaan" data-toggle="tooltip" data-placement="left" style="display: none;"><span class="fa fa-chevron-up"></span></a>
+        <a id="back-to-top" href="#" class="btn btn-primary btn-md back-to-top" role="button" title="Back to the top" data-toggle="tooltip" data-placement="left" style="display: none;"><span class="fa fa-chevron-up"></span></a>
     </div>
+
     <div class="push"></div>
+
     <footer class="footer">
         <div class="container">
             <p class="text-muted">
@@ -41,11 +47,13 @@
             </p>
         </div>
     </footer>
+
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
+
     <environment names="Staging,Production">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
