@@ -10,7 +10,7 @@
     {
         foreach (var alert in alerts)
         {
-            var dismissableClass = alert.Dismissable ? "alert-dismissable" : null;
+            var dismissableClass = alert.Dismissable ? "alert-dismissable" : "alert-fadeable";
             <div class="alert alert-@alert.AlertStyle @dismissableClass fade in">
                 @if (alert.Dismissable)
                 {

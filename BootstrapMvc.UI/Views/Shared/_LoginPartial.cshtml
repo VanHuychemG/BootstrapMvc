@@ -1,4 +1,10 @@
 ﻿<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Samples <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a asp-area="" asp-controller="Home" asp-action="Alerts"><i class="fa fa-warning fa-fw"></i>&nbsp;Alerts</a></li>
+        </ul>
+    </li>
     <li><a asp-area="" asp-controller="Home" asp-action="Contact"><i class="fa fa-envelope fa-fw"></i>&nbsp;Contact</a></li>
-    <li><a asp-area="" asp-controller="Home" asp-action="About"><i class="fa fa-envelope fa-fw"></i>&nbsp;About</a></li>
+    <li><a asp-area="" asp-controller="Home" asp-action="About"><i class="fa fa-info-circle fa-fw"></i>&nbsp;About</a></li>
 </ul>

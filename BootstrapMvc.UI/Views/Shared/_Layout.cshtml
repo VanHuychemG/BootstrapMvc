@@ -28,9 +28,10 @@
     <base href="/">
 </head>
 <body>
+
     @await Html.PartialAsync("_Navigation")
+
     <div class="container">
-        @await Html.PartialAsync("_Alerts")
         @RenderBody()
     </div>
 
