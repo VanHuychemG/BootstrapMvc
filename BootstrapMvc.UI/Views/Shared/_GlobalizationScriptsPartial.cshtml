@@ -1,0 +1,55 @@
+﻿<environment names="Development">
+    <script src="~/lib/jquery-validation/src/localization/messages_nl.js"></script>
+    <script src="~/lib/cldrjs/dist/cldr.js"></script>
+    <script src="~/lib/cldrjs/dist/cldr/supplemental.js"></script>
+    <script src="~/lib/globalize/dist/globalize.js"></script>
+    <script src="~/lib/jquery-validation-globalize/jquery.validate.globalize.js"></script>
+</environment>
+
+<environment names="Staging,Production">
+    <script src="~/lib/jquery-validation/src/localization/messages_nl.js" asp-append-version="true"></script>
+    <script src="~/lib/cldrjs/dist/cldr.js" asp-append-version="true"></script>
+    <script src="~/lib/cldrjs/dist/cldr/supplemental.js" asp-append-version="true"></script>
+    <script src="~/lib/globalize/dist/globalize.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-globalize/jquery.validate.globalize.min.js" asp-append-version="true"></script>
+</environment>
+
+<script type="text/javascript">
+
+    Globalize.load({
+        "main": {
+            "en": {
+                "identity": {
+                    "version": {
+                        "_cldrVersion": "25",
+                        "_number": "$Revision: 91 $"
+                    },
+                    "generation": {
+                        "_date": "$Date: 2014-03-13 22:27:12 -0500 (Thu, 13 Mar 2014) $"
+                    },
+                    "language": "en"
+                }
+            }
+        },
+        "supplemental": {
+            "version": {
+                "_cldrVersion": "25",
+                "_number": "$Revision: 91 $"
+            },
+            "currencyData": {
+                "fractions": {
+                    "DEFAULT": {
+                        "_rounding": "0",
+                        "_digits": "2"
+                    }
+                }
+            },
+            "likelySubtags": {
+                "en": "en-Latn-US"
+            }
+        }
+    });
+
+    Globalize.locale("en");
+
+</script>

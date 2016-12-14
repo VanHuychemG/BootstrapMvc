@@ -14,16 +14,18 @@
 @await Html.PartialAsync("_Alerts")
 
 @*<form asp-action="BootstrapValidationStyle" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
-    @await Component.InvokeAsync("Address", new { address = Model })
-</form>*@
+        @await Component.InvokeAsync("Address", new { address = Model })
+    </form>*@
 
 @section Scripts {
-    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    @{await Html.RenderPartialAsync("_GlobalizationScriptsPartial"); }
 
     <script type="text/javascript">
         $(document).ready(function () {
 
-            setFormValidation("myForm");
+            //setFormValidation("myForm");
         })
     </script>
 }
