@@ -6,7 +6,9 @@
     <title>@ViewData["Title"] - BootstrapMvc</title>
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="~/lib/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap-toggle/css/bootstrap-toggle.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" href="~/lib/bootswatch/simplex/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -16,6 +18,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              asp-append-version="true"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"
+              asp-fallback-href="~/lib/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"
+              asp-fallback-test-class="datepicker" asp-fallback-test-property="direction" asp-fallback-test-value="ltr"
+              asp-append-version="true" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+              asp-fallback-href="~/lib/bootstrap-toggle/css/bootstrap-toggle.css"
+              asp-fallback-test-class="toggle" asp-fallback-test-property="position" asp-fallback-test-value="relative"
               asp-append-version="true" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
               asp-fallback-href="~/lib/font-awesome/css/font-awesome.min.css"
@@ -52,6 +62,8 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+        <script src="~/lib/bootstrap-toggle/js/bootstrap-toggle.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 
@@ -59,6 +71,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"
+                asp-fallback-src="~/lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.datepicker">
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.js"
+                asp-fallback-src="~/lib/bootstrap-toggle/js/bootstrap-toggle.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.bootstrapToggle">
 
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
