@@ -11,9 +11,14 @@ namespace BootstrapMvc.UI.Controllers
             return View();
         }
 
+        public IActionResult BootstrapValidationStyle()
+        {
+            return View();
+        }
+
         [HttpPost]
-        [ValidateAntiForgeryToken, ActionName("Index")]
-        public IActionResult Edit(AddressViewModel viewModel)
+        [ValidateAntiForgeryToken]
+        public IActionResult BootstrapValidationStyle(AddressViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -25,6 +30,11 @@ namespace BootstrapMvc.UI.Controllers
             Danger("Looks like something went wrong. Please check your form.");
 
             return View(viewModel);
+        }
+
+        public IActionResult Localized()
+        {
+            return View();
         }
     }
 }

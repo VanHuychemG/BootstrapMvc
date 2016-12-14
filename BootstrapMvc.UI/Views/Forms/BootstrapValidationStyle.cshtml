@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Bootstrap Validation Style";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<ul class="breadcrumb">
+    <li><a asp-area="" asp-controller="Forms" asp-action="Index">Forms</a></li>
+    <li class="active">Bootstrap Validation Style</li>
+</ul>
+
+@await Html.PartialAsync("_Alerts")
+
+<form asp-action="BootstrapValidationStyle" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
+    @await Component.InvokeAsync("Address", new { address = Model })
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            setFormValidation("myForm");
+        })
+    </script>
+}
