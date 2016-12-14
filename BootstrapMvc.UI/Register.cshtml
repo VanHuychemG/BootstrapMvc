@@ -1,0 +1,10 @@
+﻿@using BootstrapMvc.UI.ViewModels
+@model RegisterViewModel
+
+@Html.AntiForgeryToken()
+
+<fieldset>
+    <legend>Form with custom attributes</legend>
+</fieldset>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
