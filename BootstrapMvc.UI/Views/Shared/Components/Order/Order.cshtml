@@ -20,7 +20,12 @@
 <div class="form-group">
     <label asp-for="Price" class="col-lg-2 control-label"></label>
     <div class="col-lg-8">
-        <input asp-for="Price" class="form-control" />
+        <div class="input-prepend input-group">
+            <span class="add-on input-group-addon">
+                <i class="fa fa-euro"></i>
+            </span>
+            <input asp-for="Price" class="form-control" />
+        </div>
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
 </div>
@@ -28,7 +33,18 @@
 <div class="form-group">
     <label asp-for="CreationDate" class="col-lg-2 control-label"></label>
     <div class="col-lg-8">
-        <input asp-for="CreationDate" class="form-control" />
+        <div class="input-prepend input-group">
+            <span class="add-on input-group-addon">
+                <i class="fa fa-calendar"></i>
+            </span>
+            <input asp-for="CreationDate" class="form-control datepicker" />
+        </div>
         <span asp-validation-for="CreationDate" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-lg-8 col-lg-offset-2">
+        <input type="submit" value="Submit" class="btn btn-primary" />
     </div>
 </div>

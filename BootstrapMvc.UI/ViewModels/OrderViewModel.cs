@@ -13,5 +13,11 @@ namespace BootstrapMvc.UI.ViewModels
 
         [Required]
         public DateTime CreationDate { get; set; }
+
+        public OrderViewModel()
+        {
+            Price = 0;
+            CreationDate = DateTime.Today;
+        }
     }
 }
