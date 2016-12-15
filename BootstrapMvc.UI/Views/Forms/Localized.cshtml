@@ -13,6 +13,12 @@
 
 @await Html.PartialAsync("_Alerts")
 
+<div class="container-fluid">
+    <h4>Globalize demo for the <em id="locale"></em> culture / locale</h4>
+    <p>This is a number <strong id="number"></strong> formatted by Globalize: <strong id="numberFormatted"></strong></p>
+    <p>This is a date <strong id="date"></strong> formatted by Globalize: <strong id="dateFormatted"></strong></p>
+</div>
+
 @*<form asp-action="BootstrapValidationStyle" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
         @await Component.InvokeAsync("Address", new { address = Model })
     </form>*@

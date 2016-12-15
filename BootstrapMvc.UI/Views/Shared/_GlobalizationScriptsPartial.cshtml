@@ -1,55 +1,61 @@
 ﻿<environment names="Development">
     <script src="~/lib/jquery-validation/src/localization/messages_nl.js"></script>
+
     <script src="~/lib/cldrjs/dist/cldr.js"></script>
+    <script src="~/lib/cldrjs/dist/cldr/event.js"></script>
     <script src="~/lib/cldrjs/dist/cldr/supplemental.js"></script>
+
     <script src="~/lib/globalize/dist/globalize.js"></script>
+    <script src="~/lib/globalize/dist/globalize/number.js"></script>
+    <script src="~/lib/globalize/dist/globalize/date.js"></script>
+
     <script src="~/lib/jquery-validation-globalize/jquery.validate.globalize.js"></script>
 </environment>
 
 <environment names="Staging,Production">
     <script src="~/lib/jquery-validation/src/localization/messages_nl.js" asp-append-version="true"></script>
+
     <script src="~/lib/cldrjs/dist/cldr.js" asp-append-version="true"></script>
     <script src="~/lib/cldrjs/dist/cldr/supplemental.js" asp-append-version="true"></script>
+
     <script src="~/lib/globalize/dist/globalize.js" asp-append-version="true"></script>
+
     <script src="~/lib/jquery-validation-globalize/jquery.validate.globalize.min.js" asp-append-version="true"></script>
 </environment>
 
-<script type="text/javascript">
+<script>
 
-    Globalize.load({
-        "main": {
-            "en": {
-                "identity": {
-                    "version": {
-                        "_cldrVersion": "25",
-                        "_number": "$Revision: 91 $"
-                    },
-                    "generation": {
-                        "_date": "$Date: 2014-03-13 22:27:12 -0500 (Thu, 13 Mar 2014) $"
-                    },
-                    "language": "en"
-                }
-            }
-        },
-        "supplemental": {
-            "version": {
-                "_cldrVersion": "25",
-                "_number": "$Revision: 91 $"
-            },
-            "currencyData": {
-                "fractions": {
-                    "DEFAULT": {
-                        "_rounding": "0",
-                        "_digits": "2"
-                    }
-                }
-            },
-            "likelySubtags": {
-                "en": "en-Latn-US"
-            }
-        }
-    });
+        var locale = 'nl';
 
-    Globalize.locale("en");
+        Promise.all([
+                // Core
+                fetch('lib/cldr-data/supplemental/likelySubtags.json'),
 
+                // Date
+                fetch('lib/cldr-data/main/' + locale + '/ca-gregorian.json'),
+                fetch('lib/cldr-data/main/' + locale + '/timeZoneNames.json'),
+                fetch('lib/cldr-data/supplemental/timeData.json'),
+                fetch('lib/cldr-data/supplemental/weekData.json'),
+
+                // Number
+                fetch('lib/cldr-data/main/' + locale + '/numbers.json'),
+                fetch('lib/cldr-data/supplemental/numberingSystems.json'),
+            ])
+            .then(function(responses) {
+                return Promise.all(responses.map(function(response) {
+                    return response.json();
+                }));
+            })
+            .then(Globalize.load)
+            .then(function() {
+                var number = 12345.67;
+                var date = new Date();
+
+                var globalize = Globalize(locale);
+                document.querySelector('#locale').innerText = locale;
+                document.querySelector('#number').innerText = number;
+                document.querySelector('#date').innerText = date;
+                document.querySelector('#numberFormatted').innerText = globalize.formatNumber(number, { minimumFractionDigits: 2, useGrouping: true });
+                document.querySelector('#dateFormatted').innerText = globalize.formatDate(date, { date: 'long' });
+            });
 </script>
