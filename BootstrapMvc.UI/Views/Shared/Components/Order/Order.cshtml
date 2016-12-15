@@ -1,0 +1,34 @@
+﻿@using BootstrapMvc.UI.ViewModels
+@model OrderViewModel
+
+@Html.AntiForgeryToken()
+
+<fieldset>
+    <legend>Order</legend>
+</fieldset>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<div class="form-group">
+    <label asp-for="Name" class="col-lg-2 control-label"></label>
+    <div class="col-lg-8">
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form-group">
+    <label asp-for="Price" class="col-lg-2 control-label"></label>
+    <div class="col-lg-8">
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form-group">
+    <label asp-for="CreationDate" class="col-lg-2 control-label"></label>
+    <div class="col-lg-8">
+        <input asp-for="CreationDate" class="form-control" />
+        <span asp-validation-for="CreationDate" class="text-danger"></span>
+    </div>
+</div>

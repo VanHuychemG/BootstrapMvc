@@ -1,22 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Localized";
 }
+
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
+
 <p>Use this area to provide additional information.</p>
+
 <ul class="breadcrumb">
     <li><a asp-area="" asp-controller="Forms" asp-action="Index">Forms</a></li>
     <li class="active">Localized</li>
 </ul>
+
 @await Html.PartialAsync("_Alerts")
+
 <div class="container-fluid">
     <h4>Globalize demo for the <em id="locale"></em> culture / locale</h4>
     <p>This is a number <strong id="number"></strong> formatted by Globalize: <strong id="numberFormatted"></strong></p>
     <p>This is a date <strong id="date"></strong> formatted by Globalize: <strong id="dateFormatted"></strong></p>
 </div>
-@*<form asp-action="BootstrapValidationStyle" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
-        @await Component.InvokeAsync("Address", new { address = Model })
-    </form>*@
+
+<form asp-action="BootstrapValidationStyle" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
+        @await Component.InvokeAsync("Order", new { order = Model })
+    </form>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
     @{await Html.RenderPartialAsync("_GlobalizationScriptsPartial"); }
@@ -34,7 +41,7 @@
             document.querySelector('#numberFormatted').innerText = globalize.formatNumber(number, { minimumFractionDigits: 2, useGrouping: true });
             document.querySelector('#dateFormatted').innerText = globalize.formatDate(date, { date: 'long' });
 
-            //setFormValidation("myForm");
+            setFormValidation("myForm");
         })
     </script>
 }

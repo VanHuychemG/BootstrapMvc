@@ -36,5 +36,21 @@ namespace BootstrapMvc.UI.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Localized(OrderViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Success("Hooray!");
+
+                return View(viewModel);
+            }
+
+            Danger("Looks like something went wrong. Please check your form.");
+
+            return View(viewModel);
+        }
     }
 }
