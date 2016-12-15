@@ -6,3 +6,5 @@ obj/
 *.user
 
 BootstrapMvc.UI/wwwroot/lib/
+
+BootstrapMvc.UI/node_modules
