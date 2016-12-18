@@ -1,5 +1,9 @@
 # BootstrapMvc
 
+## Prerequisites
+* https://github.com/dotnet/core/blob/master/release-notes/preview-download.md
+* https://blogs.msdn.microsoft.com/dotnet/2016/10/25/announcing-net-core-1-1-preview-1/
+
 ## DONE
 * bootstrap
 * bootswatch

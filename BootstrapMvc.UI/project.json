@@ -5,7 +5,7 @@
 
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.1.0"
+      "version": "1.1.0-preview1-001100-00"
     },
 
     "Microsoft.AspNetCore.Diagnostics": "1.1.0",
@@ -24,7 +24,8 @@
   },
 
   "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final",
+    "Microsoft.AspNetCore.Mvc.Razor.Precompilation.Tools": "1.0.0-preview1-final"
   },
 
   "frameworks": {
@@ -62,6 +63,10 @@
   },
 
   "scripts": {
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+    "prepublish": [ "bower -f install --allow-root", "dotnet bundle" ],
+    "postpublish": [
+      "dotnet razor-compile --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%",
+      "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+    ]
   }
 }
