@@ -7,9 +7,9 @@
 * navigation
 * bootstrap style validation
 * localized form
+* response cache
 
 ## TODO
-* Cache
 * login
 * identity
 
