@@ -8,6 +8,7 @@
 * bootstrap style validation
 * localized form
 * response cache
+* static file cache
 
 ## TODO
 * login
