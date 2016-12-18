@@ -1,12 +1,24 @@
 # BootstrapMvc
 
 ## DONE
-bootstrap
-bootswatch
-alerts
-navigation
+* bootstrap
+* bootswatch
+* alerts
+* navigation
+* bootstrap style validation
+* localized form
 
 ## TODO
-login
-identity
+* login
+* identity
+
+## SETUP
+```
+cd BootstrapMvc
+dotnet restore
+cd BootstrapMvc.UI
+delete wwwroot/lib
+bower install
+npm install gulp --save-dev
+```
 
