@@ -1,5 +1,6 @@
 ﻿using BootstrapMvc.Core.Controllers;
 using BootstrapMvc.UI.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BootstrapMvc.UI.Controllers
@@ -32,14 +33,14 @@ namespace BootstrapMvc.UI.Controllers
             return View(viewModel);
         }
 
-        public IActionResult Localized()
+        public IActionResult LocalizedForm()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Localized(OrderViewModel viewModel)
+        public IActionResult LocalizedForm(OrderViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -51,6 +52,18 @@ namespace BootstrapMvc.UI.Controllers
             Danger("Looks like something went wrong. Please check your form.");
 
             return View(viewModel);
+        }
+
+        public IActionResult UploadAndDisplayImage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UploadAndDisplayImage(IFormFile file)
+        {
+            return View();
         }
     }
 }

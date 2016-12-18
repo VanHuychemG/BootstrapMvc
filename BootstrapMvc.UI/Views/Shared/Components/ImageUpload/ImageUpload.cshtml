@@ -1,0 +1,15 @@
+﻿@using BootstrapMvc.UI.ViewModels
+@model ImageViewModel
+
+@Html.AntiForgeryToken()
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <div class="col-lg-8">
+        <input asp-for="Base64" class="form-control" type="file" id="file" name="file" accept=".jpg, .png, .jpeg, .gif|images/*" />
+        <span asp-validation-for="Base64" class="text-danger"></span>
+    </div>
+    <div class="col-lg-4">
+        <input type="submit" value="Upload" class="btn btn-primary" />
+    </div>
+</div>
