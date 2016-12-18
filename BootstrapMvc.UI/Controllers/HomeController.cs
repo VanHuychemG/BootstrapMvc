@@ -2,6 +2,7 @@
 
 namespace BootstrapMvc.UI.Controllers
 {
+    [ResponseCache(CacheProfileName = "PublicCache")]
     public class HomeController : Controller
     {
         public IActionResult Index()

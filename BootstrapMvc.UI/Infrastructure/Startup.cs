@@ -39,7 +39,21 @@ namespace BootstrapMvc.UI.Infrastructure
                 options.IdleTimeout = TimeSpan.FromSeconds(3600);
             });
 
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.CacheProfiles.Add("PrivateCache",
+                     new Microsoft.AspNetCore.Mvc.CacheProfile
+                     {
+                         Duration = 60,
+                         Location = Microsoft.AspNetCore.Mvc.ResponseCacheLocation.None
+                     });
+                options.CacheProfiles.Add("PublicCache",
+                    new Microsoft.AspNetCore.Mvc.CacheProfile
+                    {
+                        Duration = 86400,
+                        Location = Microsoft.AspNetCore.Mvc.ResponseCacheLocation.Client
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
