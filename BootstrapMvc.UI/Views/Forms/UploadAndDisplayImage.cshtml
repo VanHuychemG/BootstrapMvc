@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="well">
-            <form asp-action="UploadAndDisplayImage" asp-controller="Forms" method="post" class="form-horizontal" novalidate="novalidate" id="myForm">
+            <form asp-action="UploadAndDisplayImage" asp-controller="Forms" method="post" class="form-horizontal" enctype="multipart/form-data" novalidate="novalidate" id="myForm">
                 @await Component.InvokeAsync("ImageUpload", new { image = Model })
             </form>
         </div>

@@ -13,7 +13,7 @@
 * localized form
 * response cache
 * static file cache
-* precompiled razo views
+* precompiled razor views
 
 ## TODO
 * login
