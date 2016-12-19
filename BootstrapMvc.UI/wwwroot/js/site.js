@@ -1,6 +1,7 @@
 ﻿$(document)
     .ready(function () {
 
+        //  password toggler
         var passwordToggler = function (element, field) {
             this.element = element;
             this.field = field;
@@ -21,6 +22,23 @@
             }
         };
 
+        //  scroll to top
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $("#back-to-top").fadeIn();
+            } else {
+                $("#back-to-top").fadeOut();
+            }
+        });
+
+        $("#back-to-top").click(function () {
+            $("body,html").animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        //  reset height of fading alerts
         $(".alert")
             .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
                 function (e) {

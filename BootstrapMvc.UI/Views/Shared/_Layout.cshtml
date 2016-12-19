@@ -73,6 +73,14 @@
                 asp-fallback-test="window.jQuery">
 
         </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+
+
+        </script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"
                 asp-fallback-src="~/lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.datepicker">
@@ -85,27 +93,6 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('#back-to-top').fadeIn();
-                } else {
-                    $('#back-to-top').fadeOut();
-                }
-            });
-
-            $('#back-to-top').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 800);
-                return false;
-            });
-        });
-    </script>
 
     @RenderSection("scripts", required: false)
 </body>
