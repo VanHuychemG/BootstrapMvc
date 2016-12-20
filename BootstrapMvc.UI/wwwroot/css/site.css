@@ -118,6 +118,13 @@
     }
 }
 
+/* Toggle Password*/
+#password + .fa {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Hide asp.net error messages */
 .text-danger {
     display: none;
 }

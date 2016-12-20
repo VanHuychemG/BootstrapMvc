@@ -101,5 +101,10 @@ namespace BootstrapMvc.UI.Controllers
 
             return View();
         }
+
+        public IActionResult ShowHidePassword()
+        {
+            return View();
+        }
     }
 }
