@@ -119,9 +119,19 @@
 }
 
 /* Toggle Password*/
-#password + .fa {
-    cursor: pointer;
-    pointer-events: all;
+.show-hide-checkbox input[type="checkbox"],
+.show-hide-checkbox .checked {
+    display: none;
+}
+
+.show-hide-checkbox input[type="checkbox"]:checked ~ .checked
+{
+    display: inline-block;
+}
+
+.show-hide-checkbox input[type="checkbox"]:checked ~ .unchecked
+{
+    display: none;
 }
 
 /* Hide asp.net error messages */

@@ -1,12 +1,6 @@
 ﻿$(document)
     .ready(function () {
 
-        //$("#password + .fa").on("click", function () {
-        //    $(this).toggleClass("fa-eye-slash").toggleClass("fa-eye");
-
-        //    //("#password").toggle(); // activate the hideShowPassword plugin
-        //});
-
         //  scroll to top
         $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
