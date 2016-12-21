@@ -14,6 +14,7 @@
 * response cache
 * static file cache
 * precompiled razor views
+* show/hide password
 
 ## TODO
 * login
