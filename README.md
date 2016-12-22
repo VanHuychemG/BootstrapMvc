@@ -14,7 +14,7 @@
 * response cache
 * static file cache
 * precompiled razor views
-* show/hide password
+* show/hide password (bootstrap-show-password plugin and custom)
 
 ## TODO
 * login

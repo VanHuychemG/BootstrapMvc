@@ -5,6 +5,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-datepicker": "^1.6.4",
     "bootstrap-toggle": "^2.2.2",
+    "bootstrap-show-password": "1.0.3",
     "bootswatch": "3.3.7",
     "font-awesome": "4.7.0",
     "jquery": "^3.1.1",
