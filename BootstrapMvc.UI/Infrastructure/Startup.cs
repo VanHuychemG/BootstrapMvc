@@ -2,10 +2,12 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
+using Microsoft.EntityFrameworkCore;
 
 namespace BootstrapMvc.UI.Infrastructure
 {
@@ -40,6 +42,29 @@ namespace BootstrapMvc.UI.Infrastructure
                 options.IdleTimeout = TimeSpan.FromSeconds(3600);
             });
 
+            services
+                .AddEntityFrameworkMySql()
+                .AddDbContext<ApplicationContext>(db =>
+                {
+                    db.UseMySql(Configuration.GetConnectionString("ApplicationConnection"));
+                });
+
+            services
+                .AddIdentity<ApplicationUser, IdentityRole>(config =>
+                {
+                    config.User.RequireUniqueEmail = true;
+                    config.Password.RequiredLength = 6;
+                    config.Password.RequireUppercase = false;
+                })
+                .AddEntityFrameworkStores <ApplicationContext>()
+                .AddDefaultTokenProviders();
+
+            services
+                .AddScoped<IApplicationRepository, ApplicationRepository>();
+
+            services
+                .AddLogging();
+
             services.AddMvc(options =>
             {
                 options.CacheProfiles.Add("PrivateCache",
@@ -60,11 +85,18 @@ namespace BootstrapMvc.UI.Infrastructure
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+                app.UseBrowserLink();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles(new StaticFileOptions
@@ -75,6 +107,8 @@ namespace BootstrapMvc.UI.Infrastructure
                     ctx.Context.Response.Headers[HeaderNames.CacheControl] = "public,max-age=" + durationInSeconds;
                 }
             });
+
+            app.UseIdentity();
 
             app.UseSession();
 
