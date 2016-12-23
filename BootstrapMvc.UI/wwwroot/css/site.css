@@ -124,14 +124,20 @@
     display: none;
 }
 
-.show-hide-checkbox input[type="checkbox"]:checked ~ .checked
-{
-    display: inline-block;
+    .show-hide-checkbox input[type="checkbox"]:checked ~ .checked {
+        display: inline-block;
+    }
+
+    .show-hide-checkbox input[type="checkbox"]:checked ~ .unchecked {
+        display: none;
+    }
+
+.show-hide-checkbox {
+    cursor: pointer;
 }
 
-.show-hide-checkbox input[type="checkbox"]:checked ~ .unchecked
-{
-    display: none;
+label.show-hide-checkbox {
+    margin-bottom: 0px;
 }
 
 /* Hide asp.net error messages */
