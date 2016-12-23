@@ -21,12 +21,26 @@
 * identity
 
 ## SETUP
+
+install Node.js (https://github.com/nodejs/node/wiki)
+
 ```
+npm install gulp -g
+
+git clone https://github.com/VanHuychemG/BootstrapMvc.git
+
 cd BootstrapMvc
+
 dotnet restore
+
 cd BootstrapMvc.UI
+
 delete wwwroot/lib
+
 bower install
+
 npm install gulp --save-dev
+
+gulp make-globalize-culture-nl-js
 ```
 
