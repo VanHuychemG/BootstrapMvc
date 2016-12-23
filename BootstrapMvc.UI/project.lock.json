@@ -60,6 +60,39 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Cookies/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -101,6 +134,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNetCore.DataProtection/1.1.0": {
@@ -324,6 +370,36 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/1.1.0": {
@@ -875,6 +951,82 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.0.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1410,6 +1562,35 @@
           }
         }
       },
+      "MySqlConnector/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.0.0",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Data.Common": "4.1.0",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Net.NameResolution": "4.0.0",
+          "System.Net.Security": "4.0.0",
+          "System.Net.Sockets": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks.Extensions": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1490,6 +1671,55 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
+          "MySqlConnector": "0.7.0",
+          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1880,6 +2110,25 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2108,6 +2357,25 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Interactive.Async/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -2364,17 +2632,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.3.0-preview1-24530-04": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0-preview1-24530-04",
-          "System.Diagnostics.Debug": "4.3.0-preview1-24530-04",
-          "System.Linq": "4.3.0-preview1-24530-04",
-          "System.Linq.Expressions": "4.3.0-preview1-24530-04",
-          "System.Reflection": "4.3.0-preview1-24530-04",
-          "System.Reflection.Extensions": "4.3.0-preview1-24530-04",
-          "System.Resources.ResourceManager": "4.3.0-preview1-24530-04",
-          "System.Runtime": "4.3.0-preview1-24530-04"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -3614,6 +3882,39 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Cookies/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -3655,6 +3956,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNetCore.DataProtection/1.1.0": {
@@ -3878,6 +4192,36 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/1.1.0": {
@@ -4401,6 +4745,82 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.0.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
@@ -4941,6 +5361,35 @@
           "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "MySqlConnector/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.0.0",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Data.Common": "4.1.0",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Net.NameResolution": "4.0.0",
+          "System.Net.Security": "4.0.0",
+          "System.Net.Sockets": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks.Extensions": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -5021,6 +5470,55 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
+          "MySqlConnector": "0.7.0",
+          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.any.System.Collections/4.3.0": {
@@ -5744,6 +6242,25 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5952,6 +6469,25 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
+        }
+      },
+      "System.Interactive.Async/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -6182,17 +6718,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.3.0-preview1-24530-04": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0-preview1-24530-04",
-          "System.Diagnostics.Debug": "4.3.0-preview1-24530-04",
-          "System.Linq": "4.3.0-preview1-24530-04",
-          "System.Linq.Expressions": "4.3.0-preview1-24530-04",
-          "System.Reflection": "4.3.0-preview1-24530-04",
-          "System.Reflection.Extensions": "4.3.0-preview1-24530-04",
-          "System.Resources.ResourceManager": "4.3.0-preview1-24530-04",
-          "System.Runtime": "4.3.0-preview1-24530-04"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -7347,6 +7883,39 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Cookies/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -7388,6 +7957,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNetCore.DataProtection/1.1.0": {
@@ -7611,6 +8193,36 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/1.1.0": {
@@ -8137,6 +8749,82 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.0.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
@@ -8677,6 +9365,35 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "MySqlConnector/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.0.0",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Data.Common": "4.1.0",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Net.NameResolution": "4.0.0",
+          "System.Net.Security": "4.0.0",
+          "System.Net.Sockets": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks.Extensions": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -8757,6 +9474,55 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
+          "MySqlConnector": "0.7.0",
+          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.any.System.Collections/4.3.0": {
@@ -9441,6 +10207,25 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -9649,6 +10434,25 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
+        }
+      },
+      "System.Interactive.Async/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -9879,17 +10683,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.3.0-preview1-24530-04": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0-preview1-24530-04",
-          "System.Diagnostics.Debug": "4.3.0-preview1-24530-04",
-          "System.Linq": "4.3.0-preview1-24530-04",
-          "System.Linq.Expressions": "4.3.0-preview1-24530-04",
-          "System.Reflection": "4.3.0-preview1-24530-04",
-          "System.Reflection.Extensions": "4.3.0-preview1-24530-04",
-          "System.Resources.ResourceManager": "4.3.0-preview1-24530-04",
-          "System.Runtime": "4.3.0-preview1-24530-04"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -11044,6 +11848,39 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Cookies/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -11085,6 +11922,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNetCore.DataProtection/1.1.0": {
@@ -11308,6 +12158,36 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/1.1.0": {
@@ -11834,6 +12714,82 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.0.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
@@ -12374,6 +13330,35 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "MySqlConnector/0.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.0.0",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Data.Common": "4.1.0",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.Compression": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Net.NameResolution": "4.0.0",
+          "System.Net.Security": "4.0.0",
+          "System.Net.Sockets": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks.Extensions": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -12454,6 +13439,55 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
+          "MySqlConnector": "0.7.0",
+          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Pomelo.JsonObject.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.any.System.Collections/4.3.0": {
@@ -13138,6 +14172,25 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -13346,6 +14399,25 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
+        }
+      },
+      "System.Interactive.Async/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -13576,17 +14648,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.3.0-preview1-24530-04": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0-preview1-24530-04",
-          "System.Diagnostics.Debug": "4.3.0-preview1-24530-04",
-          "System.Linq": "4.3.0-preview1-24530-04",
-          "System.Linq.Expressions": "4.3.0-preview1-24530-04",
-          "System.Reflection": "4.3.0-preview1-24530-04",
-          "System.Reflection.Extensions": "4.3.0-preview1-24530-04",
-          "System.Resources.ResourceManager": "4.3.0-preview1-24530-04",
-          "System.Runtime": "4.3.0-preview1-24530-04"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -14747,6 +15819,32 @@
         "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.xml"
       ]
     },
+    "Microsoft.AspNetCore.Authentication/1.1.0": {
+      "sha512": "zapEpMe6NM7S2pNYtR1OMQSHLrDPjRASIt7lktBTt6w6+0ocSxwiIoNyRiBys1VbhGJQnE9jNWjj5VpMJbnB9A==",
+      "type": "package",
+      "path": "Microsoft.AspNetCore.Authentication/1.1.0",
+      "files": [
+        "Microsoft.AspNetCore.Authentication.1.1.0.nupkg.sha512",
+        "Microsoft.AspNetCore.Authentication.nuspec",
+        "lib/net451/Microsoft.AspNetCore.Authentication.dll",
+        "lib/net451/Microsoft.AspNetCore.Authentication.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Cookies/1.1.0": {
+      "sha512": "0u+Aj0a8PmqUcU0A3ugWH1lE/8jBiww5zjCHTw5RZCTRc6/0M/AVxENDUXcBJXxsVAIkTUXi6iKY8zhFmvLWcw==",
+      "type": "package",
+      "path": "Microsoft.AspNetCore.Authentication.Cookies/1.1.0",
+      "files": [
+        "Microsoft.AspNetCore.Authentication.Cookies.1.1.0.nupkg.sha512",
+        "Microsoft.AspNetCore.Authentication.Cookies.nuspec",
+        "lib/net451/Microsoft.AspNetCore.Authentication.Cookies.dll",
+        "lib/net451/Microsoft.AspNetCore.Authentication.Cookies.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/1.1.0": {
       "sha512": "dqveE6pqsnzkab2vw+aFExFYeCikF/T+GKZW9ki8dwJuN7M2+jJcgWtYAv83q7NjBARVh2xH8xf0ahzeuXL/WQ==",
       "type": "package",
@@ -14784,6 +15882,19 @@
         "lib/net451/Microsoft.AspNetCore.Cryptography.Internal.xml",
         "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.dll",
         "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.Internal.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0": {
+      "sha512": "cVlVvsH4/9G6AjrlXVO6unCzuFHnDCGRhPJNufOCclxpwImZUdhi+EIh09gSaCJ55gme2/Vn0ycig0cF9gKcbg==",
+      "type": "package",
+      "path": "Microsoft.AspNetCore.Cryptography.KeyDerivation/1.1.0",
+      "files": [
+        "Microsoft.AspNetCore.Cryptography.KeyDerivation.1.1.0.nupkg.sha512",
+        "Microsoft.AspNetCore.Cryptography.KeyDerivation.nuspec",
+        "lib/net451/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/net451/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml"
       ]
     },
     "Microsoft.AspNetCore.DataProtection/1.1.0": {
@@ -14951,6 +16062,32 @@
         "lib/net451/Microsoft.AspNetCore.HttpOverrides.xml",
         "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.dll",
         "lib/netstandard1.3/Microsoft.AspNetCore.HttpOverrides.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Identity/1.1.0": {
+      "sha512": "M2W5Y0Nd1GLY0M4TYph6zptPp7dhdrMALx1CP4g8iCU5G148j2rRTwMd3o5699+8M8Brtx5cOGiSThadVFKMuQ==",
+      "type": "package",
+      "path": "Microsoft.AspNetCore.Identity/1.1.0",
+      "files": [
+        "Microsoft.AspNetCore.Identity.1.1.0.nupkg.sha512",
+        "Microsoft.AspNetCore.Identity.nuspec",
+        "lib/net451/Microsoft.AspNetCore.Identity.dll",
+        "lib/net451/Microsoft.AspNetCore.Identity.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Identity.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Identity.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0": {
+      "sha512": "ZFZmB6PxNw2dnER96m6iTVLaG5SWH/95reGVgGzwwATxRMzIEMmFdRWNCgSpKUdHsPEyDg9Xd9FLRHFiQsG9jw==",
+      "type": "package",
+      "path": "Microsoft.AspNetCore.Identity.EntityFrameworkCore/1.1.0",
+      "files": [
+        "Microsoft.AspNetCore.Identity.EntityFrameworkCore.1.1.0.nupkg.sha512",
+        "Microsoft.AspNetCore.Identity.EntityFrameworkCore.nuspec",
+        "lib/net451/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+        "lib/net451/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml"
       ]
     },
     "Microsoft.AspNetCore.JsonPatch/1.1.0": {
@@ -15411,6 +16548,81 @@
         "Microsoft.DotNet.PlatformAbstractions.nuspec",
         "lib/net451/Microsoft.DotNet.PlatformAbstractions.dll",
         "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/1.1.0": {
+      "sha512": "S00vr6pLeoCMbm1PsXNZIceCAA/TUX83W3f2PcLFLGrx2QnGo5aqhtYjHvBhOVKJXZmt52EKEdORoTZVZ/swww==",
+      "type": "package",
+      "path": "Microsoft.EntityFrameworkCore/1.1.0",
+      "files": [
+        "Microsoft.EntityFrameworkCore.1.1.0.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/1.1.0": {
+      "sha512": "7hWqxlNYUocjRqljw6yi3bQpEjMyzNSBX+LqsUuo9cFqTu3uv2YVRyRobBmfvnXVNfRxB6EysMmTmhxApPhiNw==",
+      "type": "package",
+      "path": "Microsoft.EntityFrameworkCore.Design/1.1.0",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Design.1.1.0.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Design.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Design.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/1.1.0": {
+      "sha512": "5LkSh1GHK/ZbI/2N6YxyofFKaAVe5/RBN38G6UQzOQVgfJxzucpJVyZt1mGHBkJ4yTlr4WQS9Wr3Ppa5X0opbw==",
+      "type": "package",
+      "path": "Microsoft.EntityFrameworkCore.Relational/1.1.0",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Relational.1.1.0.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Relational.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0": {
+      "sha512": "fF0sVEUkoGeJutGIzwnYsJJ9o2hxEGJRpSaCxPq63rhSwn0hBmCwf9ET4QqYqO9Pc6+ODXenAQa095CWzuM4Kg==",
+      "type": "package",
+      "path": "Microsoft.EntityFrameworkCore.Relational.Design/1.1.0",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Relational.Design.1.1.0.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Relational.Design.nuspec",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+      "sha512": "n7g5JB4YxLYCl32XCmjXEHDF/9J/DSeNYGjxGAzG1xUi/IXOCWd6T3XyEnDXsub7iFDvpB2VgUlh6wHDqmTZgA==",
+      "type": "package",
+      "path": "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final",
+      "files": [
+        "Microsoft.EntityFrameworkCore.Tools.1.1.0-preview4-final.nupkg.sha512",
+        "Microsoft.EntityFrameworkCore.Tools.nuspec",
+        "lib/net451/_._",
+        "lib/netstandard1.3/_._",
+        "tools/EntityFrameworkCore.PowerShell2.psd1",
+        "tools/EntityFrameworkCore.PowerShell2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/Microsoft.EntityFrameworkCore.Tools.dll",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net451/ef.exe",
+        "tools/net451/ef.x86.exe",
+        "tools/netcoreapp1.0/ef.dll",
+        "tools/netcoreapp1.0/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
@@ -15956,6 +17168,17 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
+    "MySqlConnector/0.7.0": {
+      "sha512": "lIcVnyhIUSw4erYCRwm64PW5lUhEG5+aNvwNEPjGF5Z+4e/m+R017sqMXh7SLJC2yHbvQ2CzZKpANorewlfucA==",
+      "type": "package",
+      "path": "MySqlConnector/0.7.0",
+      "files": [
+        "MySqlConnector.0.7.0.nupkg.sha512",
+        "MySqlConnector.nuspec",
+        "lib/net45/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.dll"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -15989,6 +17212,52 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+      "sha512": "K8T2saNn/tGYzJVDtA4l3SFFx309RIpKif8NL0rYck93DXmDz7ZxLDQ0WPLnkju2W2EZW6zseo1Pyi42ZGyFvg==",
+      "type": "package",
+      "path": "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final",
+      "files": [
+        "Pomelo.EntityFrameworkCore.MySql.1.1.0-preview1-final.nupkg.sha512",
+        "Pomelo.EntityFrameworkCore.MySql.nuspec",
+        "lib/net451/Pomelo.EntityFrameworkCore.MySql.dll",
+        "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll"
+      ]
+    },
+    "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+      "sha512": "g4a2izFiVM8u/aeUnZkqsOwCHAY2D+X/iTicCVjvUVsdUIobJShhAPvK7qOlNEScfbxo4oblrKJeny6IVKXh0g==",
+      "type": "package",
+      "path": "Pomelo.JsonObject/1.1.0-prerelease-10000",
+      "files": [
+        "Pomelo.JsonObject.1.1.0-prerelease-10000.nupkg.sha512",
+        "Pomelo.JsonObject.nuspec",
+        "lib/net451/Pomelo.JsonObject.dll",
+        "lib/net451/Pomelo.JsonObject.pdb",
+        "lib/netstandard1.3/Pomelo.JsonObject.dll",
+        "lib/netstandard1.3/Pomelo.JsonObject.pdb",
+        "src/Pomelo.JsonObject/Properties/AssemblyInfo.cs",
+        "src/Pomelo.JsonObject/System/JsonObject.cs",
+        "src/Pomelo.JsonObject/System/JsonObject`1.cs"
+      ]
+    },
+    "Remotion.Linq/2.1.1": {
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
+      "type": "package",
+      "path": "Remotion.Linq/2.1.1",
+      "files": [
+        "Remotion.Linq.2.1.1.nupkg.sha512",
+        "Remotion.Linq.nuspec",
+        "lib/net35/Remotion.Linq.XML",
+        "lib/net35/Remotion.Linq.dll",
+        "lib/net40/Remotion.Linq.XML",
+        "lib/net40/Remotion.Linq.dll",
+        "lib/net45/Remotion.Linq.XML",
+        "lib/net45/Remotion.Linq.dll",
+        "lib/netstandard1.0/Remotion.Linq.dll",
+        "lib/netstandard1.0/Remotion.Linq.xml",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -17697,6 +18966,55 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Data.Common/4.3.0": {
+      "sha512": "lm6E3T5u7BOuEH0u18JpbJHxBfOJPuCyl4Kg1RH10ktYLp5uEEE1xKrHW56/We4SnZpGAuCc9N0MJpSDhTHZGQ==",
+      "type": "package",
+      "path": "System.Data.Common/4.3.0",
+      "files": [
+        "System.Data.Common.4.3.0.nupkg.sha512",
+        "System.Data.Common.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.Common.dll",
+        "lib/netstandard1.2/System.Data.Common.dll",
+        "lib/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.xml",
+        "ref/netstandard1.2/de/System.Data.Common.xml",
+        "ref/netstandard1.2/es/System.Data.Common.xml",
+        "ref/netstandard1.2/fr/System.Data.Common.xml",
+        "ref/netstandard1.2/it/System.Data.Common.xml",
+        "ref/netstandard1.2/ja/System.Data.Common.xml",
+        "ref/netstandard1.2/ko/System.Data.Common.xml",
+        "ref/netstandard1.2/ru/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/de/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/es/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/fr/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/it/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ja/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ko/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ru/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hans/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hant/System.Data.Common.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
+    },
     "System.Diagnostics.Contracts/4.3.0": {
       "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
       "type": "package",
@@ -18326,6 +19644,19 @@
         "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll"
       ]
     },
+    "System.Interactive.Async/3.0.0": {
+      "sha512": "UEM+WmG1Oq0bNbPx/E1jaIQ83QOrPfVDUyuYBtG6D6DpB77ytv9flPterMujumpHuoRjSc0ilSB8w41fQc05dw==",
+      "type": "package",
+      "path": "System.Interactive.Async/3.0.0",
+      "files": [
+        "System.Interactive.Async.3.0.0.nupkg.sha512",
+        "System.Interactive.Async.nuspec",
+        "lib/net45/System.Interactive.Async.dll",
+        "lib/net45/System.Interactive.Async.xml",
+        "lib/netstandard1.0/System.Interactive.Async.dll",
+        "lib/netstandard1.0/System.Interactive.Async.xml"
+      ]
+    },
     "System.IO/4.3.0": {
       "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "type": "package",
@@ -18909,12 +20240,12 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Linq.Queryable/4.3.0-preview1-24530-04": {
-      "sha512": "4gjbZm7CRrLeMNlqSntwAQznCe9bsoK57OQc7aH79rCg9qe8V/UaflY1q9fddkPvjgFJ2WyD4Sj1NgYeZOfZfg==",
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
-      "path": "System.Linq.Queryable/4.3.0-preview1-24530-04",
+      "path": "System.Linq.Queryable/4.3.0",
       "files": [
-        "System.Linq.Queryable.4.3.0-preview1-24530-04.nupkg.sha512",
+        "System.Linq.Queryable.4.3.0.nupkg.sha512",
         "System.Linq.Queryable.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -21776,16 +23107,20 @@
     "": [
       "BootstrapMvc.Core >= 1.0.0-*",
       "Microsoft.AspNetCore.Diagnostics >= 1.1.0",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 1.1.0",
       "Microsoft.AspNetCore.Mvc >= 1.1.0",
       "Microsoft.AspNetCore.Server.IISIntegration >= 1.1.0",
       "Microsoft.AspNetCore.Server.Kestrel >= 1.1.0",
       "Microsoft.AspNetCore.Session >= 1.1.0",
       "Microsoft.AspNetCore.StaticFiles >= 1.1.0",
+      "Microsoft.EntityFrameworkCore >= 1.1.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 1.1.0-preview4-final",
       "Microsoft.Extensions.Configuration.FileExtensions >= 1.1.0",
       "Microsoft.Extensions.Configuration.Json >= 1.1.0",
       "Microsoft.Extensions.Configuration.UserSecrets >= 1.1.0",
       "Microsoft.Extensions.Logging.Console >= 1.1.0",
-      "Microsoft.NETCore.App >= 1.1.0-preview1-001100-00"
+      "Microsoft.NETCore.App >= 1.1.0-preview1-001100-00",
+      "Pomelo.EntityFrameworkCore.MySql >= 1.1.0-preview1-final"
     ],
     ".NETCoreApp,Version=v1.1": []
   },
