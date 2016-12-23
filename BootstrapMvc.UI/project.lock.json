@@ -1609,7 +1609,7 @@
           }
         }
       },
-      "MySqlConnector/0.7.0": {
+      "MySqlConnector/0.7.3": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.0.0",
@@ -1720,13 +1720,13 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
-          "MySqlConnector": "0.7.0",
-          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
-          "System.Threading.Thread": "4.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "MySqlConnector": "0.7.3",
+          "Pomelo.JsonObject": "1.1.0",
+          "System.Threading.Thread": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
@@ -1735,7 +1735,7 @@
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
         }
       },
-      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+      "Pomelo.JsonObject/1.1.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1"
@@ -5455,7 +5455,7 @@
           "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "MySqlConnector/0.7.0": {
+      "MySqlConnector/0.7.3": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.0.0",
@@ -5566,13 +5566,13 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
-          "MySqlConnector": "0.7.0",
-          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
-          "System.Threading.Thread": "4.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "MySqlConnector": "0.7.3",
+          "Pomelo.JsonObject": "1.1.0",
+          "System.Threading.Thread": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
@@ -5581,7 +5581,7 @@
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
         }
       },
-      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+      "Pomelo.JsonObject/1.1.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1"
@@ -9506,7 +9506,7 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "MySqlConnector/0.7.0": {
+      "MySqlConnector/0.7.3": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.0.0",
@@ -9617,13 +9617,13 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
-          "MySqlConnector": "0.7.0",
-          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
-          "System.Threading.Thread": "4.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "MySqlConnector": "0.7.3",
+          "Pomelo.JsonObject": "1.1.0",
+          "System.Threading.Thread": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
@@ -9632,7 +9632,7 @@
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
         }
       },
-      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+      "Pomelo.JsonObject/1.1.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1"
@@ -13518,7 +13518,7 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "MySqlConnector/0.7.0": {
+      "MySqlConnector/0.7.3": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.0.0",
@@ -13629,13 +13629,13 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
+      "Pomelo.EntityFrameworkCore.MySql/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.0-preview1-final",
-          "MySqlConnector": "0.7.0",
-          "Pomelo.JsonObject": "1.1.0-prerelease-10000",
-          "System.Threading.Thread": "4.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "MySqlConnector": "0.7.3",
+          "Pomelo.JsonObject": "1.1.0",
+          "System.Threading.Thread": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
@@ -13644,7 +13644,7 @@
           "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll": {}
         }
       },
-      "Pomelo.JsonObject/1.1.0-prerelease-10000": {
+      "Pomelo.JsonObject/1.1.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1"
@@ -17395,12 +17395,12 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
-    "MySqlConnector/0.7.0": {
-      "sha512": "lIcVnyhIUSw4erYCRwm64PW5lUhEG5+aNvwNEPjGF5Z+4e/m+R017sqMXh7SLJC2yHbvQ2CzZKpANorewlfucA==",
+    "MySqlConnector/0.7.3": {
+      "sha512": "591Hw1pnh1rE/vD3SLep7mfDpDPnVa+kUlxskvhKLC28b168Gs+g4FPt9vA4lZJyEJzvrEVbQbAacOrfs2A/fQ==",
       "type": "package",
-      "path": "MySqlConnector/0.7.0",
+      "path": "MySqlConnector/0.7.3",
       "files": [
-        "MySqlConnector.0.7.0.nupkg.sha512",
+        "MySqlConnector.0.7.3.nupkg.sha512",
         "MySqlConnector.nuspec",
         "lib/net45/MySqlConnector.dll",
         "lib/netstandard1.3/MySqlConnector.dll"
@@ -17441,23 +17441,23 @@
         "tools/install.ps1"
       ]
     },
-    "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final": {
-      "sha512": "K8T2saNn/tGYzJVDtA4l3SFFx309RIpKif8NL0rYck93DXmDz7ZxLDQ0WPLnkju2W2EZW6zseo1Pyi42ZGyFvg==",
+    "Pomelo.EntityFrameworkCore.MySql/1.1.0": {
+      "sha512": "PT6XpS5aCAnRB9PQhC1oXmwB/bOgJONJOzRLbXmAQX7fteQmOheIcoggYDabfX2QzFl9aSK9K1yDenfiGzlJPQ==",
       "type": "package",
-      "path": "Pomelo.EntityFrameworkCore.MySql/1.1.0-preview1-final",
+      "path": "Pomelo.EntityFrameworkCore.MySql/1.1.0",
       "files": [
-        "Pomelo.EntityFrameworkCore.MySql.1.1.0-preview1-final.nupkg.sha512",
+        "Pomelo.EntityFrameworkCore.MySql.1.1.0.nupkg.sha512",
         "Pomelo.EntityFrameworkCore.MySql.nuspec",
         "lib/net451/Pomelo.EntityFrameworkCore.MySql.dll",
         "lib/netstandard1.3/Pomelo.EntityFrameworkCore.MySql.dll"
       ]
     },
-    "Pomelo.JsonObject/1.1.0-prerelease-10000": {
-      "sha512": "g4a2izFiVM8u/aeUnZkqsOwCHAY2D+X/iTicCVjvUVsdUIobJShhAPvK7qOlNEScfbxo4oblrKJeny6IVKXh0g==",
+    "Pomelo.JsonObject/1.1.0": {
+      "sha512": "RoVZSaGOiJ4FcCVM+oc5bYsL6dpXwMXk9LsfDFVgxy1BW5h+CGcaJTxEoOgGetSmcPqBP1mGyRYBv19cc8MOSw==",
       "type": "package",
-      "path": "Pomelo.JsonObject/1.1.0-prerelease-10000",
+      "path": "Pomelo.JsonObject/1.1.0",
       "files": [
-        "Pomelo.JsonObject.1.1.0-prerelease-10000.nupkg.sha512",
+        "Pomelo.JsonObject.1.1.0.nupkg.sha512",
         "Pomelo.JsonObject.nuspec",
         "lib/net451/Pomelo.JsonObject.dll",
         "lib/net451/Pomelo.JsonObject.pdb",
@@ -23351,7 +23351,7 @@
       "Microsoft.Extensions.Logging.Debug >= 1.1.0",
       "Microsoft.NETCore.App >= 1.1.0-preview1-001100-00",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.1.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 1.1.0-preview1-final",
+      "Pomelo.EntityFrameworkCore.MySql >= 1.1.0",
       "System.Reflection >= 4.3.0"
     ],
     ".NETCoreApp,Version=v1.1": []
@@ -23390,13 +23390,40 @@
         "runtime": {
           "lib/netcoreapp1.0/dotnet-razor-precompile.dll": {}
         }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools.DotNet/1.1.0-preview4-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview2-003121",
+          "Microsoft.NETCore.App": "1.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-ef.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-ef.dll": {}
+        }
       }
     }
   },
   "projectFileToolGroups": {
     ".NETCoreApp,Version=v1.0": [
       "Microsoft.AspNetCore.Mvc.Razor.Precompilation.Tools >= 1.0.0-preview1-final",
-      "Microsoft.AspNetCore.Server.IISIntegration.Tools >= 1.1.0-preview4-final"
+      "Microsoft.AspNetCore.Server.IISIntegration.Tools >= 1.1.0-preview4-final",
+      "Microsoft.EntityFrameworkCore.Tools >= 1.1.0-preview4-final",
+      "Microsoft.EntityFrameworkCore.Tools.DotNet >= 1.1.0-preview4-final"
     ]
   }
 }

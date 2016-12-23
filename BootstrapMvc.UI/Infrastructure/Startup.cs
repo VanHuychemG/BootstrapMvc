@@ -55,12 +55,14 @@ namespace BootstrapMvc.UI.Infrastructure
                     config.User.RequireUniqueEmail = true;
                     config.Password.RequiredLength = 6;
                     config.Password.RequireUppercase = false;
+                    config.Password.RequireNonAlphanumeric = false;
                 })
                 .AddEntityFrameworkStores <ApplicationContext>()
                 .AddDefaultTokenProviders();
 
             services
-                .AddScoped<IApplicationRepository, ApplicationRepository>();
+                .AddScoped<IApplicationRepository, ApplicationRepository>()
+                .AddTransient<ApplicationContextSeed>();
 
             services
                 .AddLogging();
@@ -83,10 +85,22 @@ namespace BootstrapMvc.UI.Infrastructure
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public async void Configure(
+            IApplicationBuilder app,
+            IHostingEnvironment env,
+            ILoggerFactory loggerFactory,
+            ApplicationContextSeed seeder)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            var migratorOptions = new DbContextOptionsBuilder<ApplicationContext>()
+                .UseMySql(Configuration.GetConnectionString("ApplicationConnection"))
+                .UseLoggerFactory(loggerFactory)
+                .Options;
+
+            using (var migrator = new ApplicationContext(migratorOptions))
+                migrator.Database.Migrate();
 
             if (env.IsDevelopment())
             {
@@ -118,6 +132,8 @@ namespace BootstrapMvc.UI.Infrastructure
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            await seeder.EnsureSeedAsync();
         }
     }
 }

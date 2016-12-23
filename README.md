@@ -22,7 +22,22 @@
 
 ## SETUP
 
-install Node.js (https://github.com/nodejs/node/wiki)
+### Database
+
+```
+CREATE DATABASE `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE USER 'dbuser'@'%' identified by 'dbpassword';
+CREATE USER 'dbuser'@'localhost' identified by 'dbpassword';
+GRANT ALL PRIVILEGES ON mydb.* to 'dbuser'@'%' with grant option;
+GRANT ALL PRIVILEGES ON mydb.* to 'dbuser'@'localhost' with grant option;
+CREATE TABLE mydb.__EFMigrationsHistory (MigrationId nvarchar(150) NOT NULL, ProductVersion nvarchar(32) NOT NULL, CONSTRAINT PK___EFMigrationsHistory PRIMARY KEY (MigrationId));
+```
+
+### Tools
+
+* Node.js
+* Bower
+* Gulp
 
 ```
 npm install gulp -g
@@ -42,5 +57,9 @@ bower install
 npm install gulp --save-dev
 
 gulp make-globalize-culture-nl-js
+
+dotnet ef database update
+
+dotnet run
 ```
 
