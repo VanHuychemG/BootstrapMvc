@@ -15,14 +15,16 @@
 * static file cache
 * precompiled razor views
 * show/hide password (bootstrap-show-password plugin and custom)
+* identity & entity framework
 
 ## TODO
 * login
-* identity
 
 ## SETUP
 
 ### Database
+
+MySql
 
 ```
 CREATE DATABASE `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */;
@@ -38,6 +40,8 @@ CREATE TABLE mydb.__EFMigrationsHistory (MigrationId nvarchar(150) NOT NULL, Pro
 * Node.js
 * Bower
 * Gulp
+
+### Running the project
 
 ```
 npm install gulp -g
@@ -62,4 +66,6 @@ dotnet ef database update
 
 dotnet run
 ```
+
+Finally go to http://localhost:5000
 
