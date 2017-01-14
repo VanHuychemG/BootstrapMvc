@@ -7,18 +7,20 @@
 ## DONE
 * bootstrap
 * bootswatch
-* alerts
-
-![alerts](https://github.com/VanHuychemG/BootstrapMvc/tree/identity/BootstrapMvc.UI/wwwroot/images/alerts.png)
-
 * navigation
-* bootstrap style validation
-* localized form
 * response cache
 * static file cache
 * precompiled razor views
-* show/hide password (bootstrap-show-password plugin and custom)
 * identity & entity framework
+* alerts
+![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/alerts.png)
+* bootstrap style validation
+![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/bootstrap_validation.png)
+* localized form
+![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/localization.png)
+* show/hide password (bootstrap-show-password plugin and custom)
+![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/show_hide_password.png)
+
 
 ## TODO
 * login
