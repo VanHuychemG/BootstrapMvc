@@ -8,6 +8,9 @@
 * bootstrap
 * bootswatch
 * alerts
+
+![alerts](https://github.com/VanHuychemG/BootstrapMvc/tree/identity/BootstrapMvc.UI/wwwroot/images/alerts.png)
+
 * navigation
 * bootstrap style validation
 * localized form
