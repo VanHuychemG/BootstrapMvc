@@ -8,18 +8,28 @@
 * bootstrap
 * bootswatch
 * navigation
+
+![bootswatch](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/bootswatch.png)
+
 * response cache
 * static file cache
 * precompiled razor views
 * identity & entity framework
 * alerts
+
 ![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/alerts.png)
+
 * bootstrap style validation
-![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/bootstrap_validation.png)
+
+![bootstrap validation](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/bootstrap_validation.png)
+
 * localized form
-![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/localization.png)
+
+![localization](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/localization.png)
+
 * show/hide password (bootstrap-show-password plugin and custom)
-![alerts](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/show_hide_password.png)
+
+![show/hide password](https://raw.githubusercontent.com/VanHuychemG/BootstrapMvc/identity/BootstrapMvc.UI/wwwroot/images/show_hide_password.png)
 
 
 ## TODO
